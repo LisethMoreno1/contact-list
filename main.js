@@ -1,23 +1,25 @@
-let contactos = {
-  contacto: "Liseth Moreno",
-  contacto1: "Patricia Marrugo",
-  contacto2: "Alison Alison",
-};
 
-function Agregarcontacto() {
-  contactos["contacto3"] = "luis f";
-  console.log(contactos);
-}
-Agregarcontacto();
 
-function eliminarContacto() {
-  delete contactos["contacto"];
+let contactos = ["Liseth Moreno", "Juan Perez", "Maria Julio"];
+
+console.log(contactos);
+
+
+function agregarContacto(nombre){
+  contactos.unshift(nombre);
 }
+
+agregarContacto(nombre= "Patricia Marrugo");
+
+function eliminarContacto(){
+  contactosdelete=contactos.pop()
+  console.log("Contacto Eliminado: " + contactosdelete);
+}
+
 eliminarContacto();
 
-function imprimir(){
-  contactos["contacto3"];
-console.log(contactos.toString());
+function listasContactos(){
+  console.log("Listas Contactos son:" + contactos);
 }
-imprimir();
 
+listasContactos();
